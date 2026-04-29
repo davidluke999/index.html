@@ -1,0 +1,102 @@
+import React from "react";
+import { motion } from "framer-motion";
+import { Leaf, Users, Globe, Sparkles } from "lucide-react";
+
+export default function DalumagaWeb() {
+  return (
+    <div className="min-h-screen bg-black text-green-400 font-sans">
+      {/* NAVBAR */}
+      <nav className="flex justify-between items-center px-8 py-4 border-b border-green-900">
+        <h1 className="text-2xl font-bold text-green-400">DALUMAGA</h1>
+        <div className="space-x-6 text-green-300 hidden md:block">
+          <a href="#" className="hover:text-green-500">Inicio</a>
+          <a href="#" className="hover:text-green-500">Valores</a>
+          <a href="#" className="hover:text-green-500">Historia</a>
+        </div>
+      </nav>
+
+      {/* HERO */}
+      <section className="flex flex-col items-center justify-center text-center py-24 px-6 bg-gradient-to-b from-black via-green-950 to-black">
+        <motion.h1
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+          className="text-6xl md:text-8xl font-extrabold mb-6 tracking-wide"
+        >
+          DALUMAGA
+        </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.4 }}
+          className="max-w-2xl text-xl text-green-300"
+        >
+          Juegos sostenibles para conectar personas, cuidar el planeta y fortalecer la familia.
+        </motion.p>
+
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          className="mt-8 px-6 py-3 bg-green-500 text-black font-bold rounded-2xl shadow-lg hover:bg-green-400"
+        >
+          Descubrir más
+        </motion.button>
+      </section>
+
+      {/* VALORES */}
+      <section className="max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-3 gap-8">
+
+        <div className="bg-gradient-to-br from-green-900 to-black p-8 rounded-2xl shadow-xl hover:scale-105 transition">
+          <Leaf className="mb-4 text-green-400" size={32} />
+          <h2 className="text-2xl font-bold mb-4">Sostenibilidad</h2>
+          <p>
+            Diseñamos juegos con materiales reciclables y procesos responsables para reducir la huella ecológica y fomentar un consumo consciente.
+          </p>
+        </div>
+
+        <div className="bg-gradient-to-br from-green-900 to-black p-8 rounded-2xl shadow-xl hover:scale-105 transition">
+          <Globe className="mb-4 text-green-400" size={32} />
+          <h2 className="text-2xl font-bold mb-4">Ecología</h2>
+          <p>
+            Cuidamos todo el ciclo de vida del producto: desde su diseño hasta su reciclaje, evitando residuos y plásticos innecesarios.
+          </p>
+        </div>
+
+        <div className="bg-gradient-to-br from-green-900 to-black p-8 rounded-2xl shadow-xl hover:scale-105 transition">
+          <Users className="mb-4 text-green-400" size={32} />
+          <h2 className="text-2xl font-bold mb-4">Familia</h2>
+          <p>
+            Creamos juegos que fortalecen vínculos, fomentan la comunicación y generan momentos de calidad entre personas.
+          </p>
+        </div>
+
+      </section>
+
+      {/* HISTORIA */}
+      <section className="bg-green-950 py-20 px-6 text-center">
+        <div className="max-w-3xl mx-auto">
+          <Sparkles className="mx-auto mb-4 text-green-400" size={32} />
+          <h2 className="text-3xl font-bold mb-6">Nuestra historia</h2>
+          <p className="text-lg text-green-300">
+            Dalumaga nace de la visión de dos amigos que querían cambiar la forma en la que las personas se relacionan. Su objetivo es construir una sociedad más unida, consciente y sostenible a través del juego.
+          </p>
+        </div>
+      </section>
+
+      {/* FUNDADOR */}
+      <section className="py-20 px-6 text-center">
+        <div className="max-w-3xl mx-auto bg-gradient-to-br from-black to-green-900 p-10 rounded-2xl shadow-xl">
+          <h2 className="text-3xl font-bold mb-4">Fundador</h2>
+          <p className="text-green-300">
+            David Luque Moralo, Ingeniero de Aviación, impulsa la sostenibilidad, la ecología y el valor de la familia como base fundamental del proyecto.
+          </p>
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="text-center py-8 border-t border-green-900 text-green-500">
+        © {new Date().getFullYear()} DALUMAGA · Sostenible · Ecológico · Familiar
+      </footer>
+    </div>
+  );
+}
